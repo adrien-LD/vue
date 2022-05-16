@@ -34,7 +34,11 @@ export default {
         { id: 10053, parentId: 24300, name: 'test abc96' },
         { id: 24330, parentId: 10053, name: 'test abc5' },
         { id: 21011, parentId: 10053, name: 'Test6' },
-        { id: 22200, parentId: 10053, name: 'Test7' }
+        { id: 22200, parentId: 10053, name: 'Test7' },
+        { id: 24331, parentId: 24330, name: 'test abc5' },
+        { id: 24332, parentId: 24330, name: 'test abc5' },
+        { id: 24333, parentId: 24331, name: 'test abc5' },
+        { id: 24334, parentId: 24332, name: 'test abc5' },
       ],
       clipConfig: { isCopy: true },
       tableMenu: {
@@ -121,8 +125,7 @@ ${this.transformText2(children, '', level)}`;
         currentText = `${currentText}${directoryLabel}${child.id}-${child.name}
 `;
         if (child?.children?.length) {
-          level++;
-          return this.transformText2(child.children, currentText, level);
+          currentText = this.transformText2(child.children, currentText, level + 1);
         }
       }
       return currentText;
