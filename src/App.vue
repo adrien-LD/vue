@@ -3,26 +3,29 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- <demo-1></demo-1> -->
-    <TreeDemo></TreeDemo>
+    <TableDemo></TableDemo>
+    <!-- <TreeDemo></TreeDemo>
     <TreeDemo2></TreeDemo2>
-    <Demo3></Demo3>
+    <Demo3></Demo3> -->
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 // import Demo1 from './components/demo1.vue'
-import TreeDemo from './components/TreeDemo.vue'
-import TreeDemo2 from './components/TreeDemo2.vue'
-import Demo3 from './components/Demo3.vue'
+// import TreeDemo from './components/TreeDemo.vue'
+// import TreeDemo2 from './components/TreeDemo2.vue'
+// import Demo3 from './components/Demo3.vue'
+import TableDemo from './components/TableDemo.vue';
 
 export default {
   name: 'App',
   components: {
     // Demo1, 
-    TreeDemo,
-    TreeDemo2,
-    Demo3
+    // TreeDemo,
+    // TreeDemo2,
+    // Demo3,
+    TableDemo
   }
 }
 </script>
